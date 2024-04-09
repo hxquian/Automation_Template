@@ -1,0 +1,1233 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>30/2/14</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Nov 08 14:38:07 ICT 2023</td>
+</tr>
+<tr><td>Total time:</td><td>199 seconds (199805 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.beforeMethod()'><b>beforeMethod</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;1&quot; id=&quot;status1&quot; name=&quot;status&quot; checked=&quot;&quot;&gt; is not clickable at point (33, 241). Other element would receive the click: &lt;div class=&quot;drag-target&quot; style=&quot;touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=119.0.6045.107)
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9a77f2e6be899ea2fadc3da2b5bb4e19, clickElement {id=7464379E981F22949CB9F3F2CA361AE8_element_815}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.107, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\ITTEST\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53727}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53727/devtoo..., se:cdpVersion: 119.0.6045.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (9a77f2e6be899ea2fadc3da2b5bb4e19)] -&gt; css selector: #app-email-sidebar .form-check-input]
+Session ID: 9a77f2e6be899ea2fadc3da2b5bb4e19
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at Ticketing.SearchFunction.lambda$0(SearchFunction.java:31)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.forEach(Unknown Source)
+	at Ticketing.SearchFunction.searchFunctionUnTickAllBoxes(SearchFunction.java:31)
+	at Ticketing.SearchFunctionsTest.beforeMethod(SearchFunctionsTest.java:42)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace417151185", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace417151185'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;1&quot; id=&quot;status1&quot; name=&quot;status&quot; checked=&quot;&quot;&gt; is not clickable at point (33, 241). Other element would receive the click: &lt;div class=&quot;drag-target&quot; style=&quot;touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=119.0.6045.107)
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9a77f2e6be899ea2fadc3da2b5bb4e19, clickElement {id=7464379E981F22949CB9F3F2CA361AE8_element_815}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.107, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\ITTEST\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53727}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53727/devtoo..., se:cdpVersion: 119.0.6045.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (9a77f2e6be899ea2fadc3da2b5bb4e19)] -&gt; css selector: #app-email-sidebar .form-check-input]
+Session ID: 9a77f2e6be899ea2fadc3da2b5bb4e19
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at Ticketing.SearchFunction.lambda$0(SearchFunction.java:31)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/jdk.internal.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.forEach(Unknown Source)
+	at Ticketing.SearchFunction.searchFunctionUnTickAllBoxes(SearchFunction.java:31)
+	at Ticketing.SearchFunctionsTest.beforeMethod(SearchFunctionsTest.java:42)
+	at jdk.internal.reflect.GeneratedMethodAccessor10.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:590)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>7</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.afterMethod()'><b>afterMethod</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td></td>
+<td>0</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.afterMethod()'><b>afterMethod</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td></td>
+<td>0</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.afterMethod()'><b>afterMethod</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td></td>
+<td>0</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.afterMethod()'><b>afterMethod</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td></td>
+<td>0</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.beforeMethod()'><b>beforeMethod</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td></td>
+<td>0</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.afterMethod()'><b>afterMethod</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td></td>
+<td>0</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.afterMethod()'><b>afterMethod</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td></td>
+<td>0</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.beforeMethod()'><b>beforeMethod</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td></td>
+<td>0</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.beforeMethod()'><b>beforeMethod</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td></td>
+<td>0</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.beforeMethod()'><b>beforeMethod</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td></td>
+<td>0</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.afterMethod()'><b>afterMethod</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td></td>
+<td>0</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.beforeMethod()'><b>beforeMethod</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td></td>
+<td>0</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.beforeMethod()'><b>beforeMethod</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td></td>
+<td>0</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Ticketing.TicketPageTest.TicketPageTestReplyTicketByClickingNotification()'><b>TicketPageTestReplyTicketByClickingNotification</b><br>Test class: Ticketing.TicketPageTest</td>
+<td><div><pre>org.openqa.selenium.JavascriptException: javascript error: Cannot read properties of null (reading &apos;click&apos;)
+  (Session info: chrome=119.0.6045.107)
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c7488cae6b077462ee0e156726794e06, executeScript {script=arguments[0].click(), args=[null]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.107, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\ITTEST\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53133}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53133/devtoo..., se:cdpVersion: 119.0.6045.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c7488cae6b077462ee0e156726794e06
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:467)
+	at A1A.Functions.Click(Functions.java:33)
+	at Ticketing.TicketPage.ticketPageFindTicketInNotifications(TicketPage.java:182)
+	at Ticketing.TicketPageTest.TicketPageTestReplyTicketByClickingNotification(TicketPageTest.java:146)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2001530939", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2001530939'><pre>org.openqa.selenium.JavascriptException: javascript error: Cannot read properties of null (reading &apos;click&apos;)
+  (Session info: chrome=119.0.6045.107)
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c7488cae6b077462ee0e156726794e06, executeScript {script=arguments[0].click(), args=[null]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.107, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\ITTEST\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53133}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53133/devtoo..., se:cdpVersion: 119.0.6045.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c7488cae6b077462ee0e156726794e06
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:467)
+	at A1A.Functions.Click(Functions.java:33)
+	at Ticketing.TicketPage.ticketPageFindTicketInNotifications(TicketPage.java:182)
+	at Ticketing.TicketPageTest.TicketPageTestReplyTicketByClickingNotification(TicketPageTest.java:146)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>7</td>
+<td>Ticketing.TicketPageTest@6dee4f1b</td></tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.SearchFunctionsTestCheckStatusWaiting()'><b>SearchFunctionsTestCheckStatusWaiting</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td><div><pre>java.lang.AssertionError: expected:&lt;2&gt; but was:&lt;0&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:743)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:542)
+	at Ticketing.SearchFunctionsTest.SearchFunctionsTestCheckStatusWaiting(SearchFunctionsTest.java:54)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2098712880", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2098712880'><pre>java.lang.AssertionError: expected:&lt;2&gt; but was:&lt;0&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:743)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:542)
+	at Ticketing.SearchFunctionsTest.SearchFunctionsTestCheckStatusWaiting(SearchFunctionsTest.java:54)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>1</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.SearchFunctionsTestCheckStatusRejectAndPendingAndFinish()'><b>SearchFunctionsTestCheckStatusRejectAndPendingAndFinish</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td></td>
+<td>1</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.SearchFunctionsTestCheckStatusRejectAndAccept()'><b>SearchFunctionsTestCheckStatusRejectAndAccept</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td></td>
+<td>1</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.SearchFunctionsTestCheckStatusRejectAndPendingAndFinishAndAccept()'><b>SearchFunctionsTestCheckStatusRejectAndPendingAndFinishAndAccept</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td></td>
+<td>1</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.SearchFunctionsTestCheckStatusWaitingAndFinishAndAccept()'><b>SearchFunctionsTestCheckStatusWaitingAndFinishAndAccept</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td></td>
+<td>1</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.SearchFunctionsTestCheckStatusWaitingAndRejectAndFinish()'><b>SearchFunctionsTestCheckStatusWaitingAndRejectAndFinish</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td></td>
+<td>1</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.SearchFunctionsTestCheckStatusWaitingAndPending()'><b>SearchFunctionsTestCheckStatusWaitingAndPending</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td></td>
+<td>1</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+<tr>
+<td title='Ticketing.TicketPageTest.TicketPageTestConfirmRejectTicket()'><b>TicketPageTestConfirmRejectTicket</b><br>Test class: Ticketing.TicketPageTest</td>
+<td></td>
+<td>5</td>
+<td>Ticketing.TicketPageTest@6dee4f1b</td></tr>
+<tr>
+<td title='Ticketing.TicketPageTest.TicketPageTestCanNotCreateBlankTicket()'><b>TicketPageTestCanNotCreateBlankTicket</b><br>Test class: Ticketing.TicketPageTest</td>
+<td></td>
+<td>1</td>
+<td>Ticketing.TicketPageTest@6dee4f1b</td></tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.SearchFunctionsTestCheckStatusWaitingAndRejectAndAccept()'><b>SearchFunctionsTestCheckStatusWaitingAndRejectAndAccept</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td></td>
+<td>1</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.SearchFunctionsTestCheckStatusPendingAndAccept()'><b>SearchFunctionsTestCheckStatusPendingAndAccept</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td></td>
+<td>7</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.SearchFunctionsTestCheckStatusWaitingAndPendingAndAccept()'><b>SearchFunctionsTestCheckStatusWaitingAndPendingAndAccept</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td></td>
+<td>1</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.SearchFunctionsTestCheckStatusWaitingAndReject()'><b>SearchFunctionsTestCheckStatusWaitingAndReject</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td></td>
+<td>1</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.SearchFunctionsTestCheckStatusWaitingAndAccept()'><b>SearchFunctionsTestCheckStatusWaitingAndAccept</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td></td>
+<td>1</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.SearchFunctionsTestCheckStatusWaitingAndFinish()'><b>SearchFunctionsTestCheckStatusWaitingAndFinish</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td></td>
+<td>1</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.SearchFunctionsTestCheckStatusFinishAndAccept()'><b>SearchFunctionsTestCheckStatusFinishAndAccept</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td></td>
+<td>7</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.SearchFunctionsTestCheckStatusPending()'><b>SearchFunctionsTestCheckStatusPending</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td></td>
+<td>7</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.SearchFunctionsTestCheckStatusRejectAndPendingAndAccept()'><b>SearchFunctionsTestCheckStatusRejectAndPendingAndAccept</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td></td>
+<td>1</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.SearchFunctionsTestCheckStatusRejectAndFinishAndAccept()'><b>SearchFunctionsTestCheckStatusRejectAndFinishAndAccept</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td></td>
+<td>1</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+<tr>
+<td title='Ticketing.TicketPageTest.TicketPageTestRejectTicket()'><b>TicketPageTestRejectTicket</b><br>Test class: Ticketing.TicketPageTest</td>
+<td></td>
+<td>3</td>
+<td>Ticketing.TicketPageTest@6dee4f1b</td></tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.SearchFunctionsTestCheckStatusRejectAndPending()'><b>SearchFunctionsTestCheckStatusRejectAndPending</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td></td>
+<td>1</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+<tr>
+<td title='Ticketing.TicketPageTest.TicketPageTestCanNotCreateBlankDepartmentTicket()'><b>TicketPageTestCanNotCreateBlankDepartmentTicket</b><br>Test class: Ticketing.TicketPageTest</td>
+<td></td>
+<td>3</td>
+<td>Ticketing.TicketPageTest@6dee4f1b</td></tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.SearchFunctionsTestCheckStatusFinish()'><b>SearchFunctionsTestCheckStatusFinish</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td></td>
+<td>7</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+<tr>
+<td title='Ticketing.TicketPageTest.TicketPageTestCanNotCreateBlankDescriptionTicket()'><b>TicketPageTestCanNotCreateBlankDescriptionTicket</b><br>Test class: Ticketing.TicketPageTest</td>
+<td></td>
+<td>2</td>
+<td>Ticketing.TicketPageTest@6dee4f1b</td></tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.SearchFunctionsTestCheckStatusRejectAndFinish()'><b>SearchFunctionsTestCheckStatusRejectAndFinish</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td></td>
+<td>1</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+<tr>
+<td title='Ticketing.TicketPageTest.TicketPageTestReplyTicket()'><b>TicketPageTestReplyTicket</b><br>Test class: Ticketing.TicketPageTest</td>
+<td></td>
+<td>3</td>
+<td>Ticketing.TicketPageTest@6dee4f1b</td></tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.SearchFunctionsTestCheckStatusWaitingAndPendingAndFinish()'><b>SearchFunctionsTestCheckStatusWaitingAndPendingAndFinish</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td></td>
+<td>1</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+<tr>
+<td title='Ticketing.TicketPageTest.TicketPageTestCreateTicketToReject()'><b>TicketPageTestCreateTicketToReject</b><br>Test class: Ticketing.TicketPageTest</td>
+<td></td>
+<td>3</td>
+<td>Ticketing.TicketPageTest@6dee4f1b</td></tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.SearchFunctionsTestCheckStatusPendingAndFinish()'><b>SearchFunctionsTestCheckStatusPendingAndFinish</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td></td>
+<td>7</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+<tr>
+<td title='Ticketing.TicketPageTest.TicketPageTestCreateTicketToReply()'><b>TicketPageTestCreateTicketToReply</b><br>Test class: Ticketing.TicketPageTest</td>
+<td></td>
+<td>3</td>
+<td>Ticketing.TicketPageTest@6dee4f1b</td></tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.SearchFunctionsTestCheckStatusAccept()'><b>SearchFunctionsTestCheckStatusAccept</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td></td>
+<td>7</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Ticketing.TicketPageTest.TicketPageTestConfirmFinishTicket()'><b>TicketPageTestConfirmFinishTicket</b><br>Test class: Ticketing.TicketPageTest</td>
+<td><div><pre>java.lang.Throwable: Method Ticketing.TicketPageTest.TicketPageTestConfirmFinishTicket() on instance Ticketing.TicketPageTest@6dee4f1b depends on not successfully finished methods 
+[Ticketing.TicketPageTest.TicketPageTestFinishTicket() on instance Ticketing.TicketPageTest@6dee4f1b]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace674064045", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace674064045'><pre>java.lang.Throwable: Method Ticketing.TicketPageTest.TicketPageTestConfirmFinishTicket() on instance Ticketing.TicketPageTest@6dee4f1b depends on not successfully finished methods 
+[Ticketing.TicketPageTest.TicketPageTestFinishTicket() on instance Ticketing.TicketPageTest@6dee4f1b]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:150)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>Ticketing.TicketPageTest@6dee4f1b</td></tr>
+<tr>
+<td title='Ticketing.TicketPageTest.TicketPageTestConfirmApproval()'><b>TicketPageTestConfirmApproval</b><br>Test class: Ticketing.TicketPageTest</td>
+<td><div><pre>java.lang.Throwable: Method Ticketing.TicketPageTest.TicketPageTestConfirmApproval() on instance Ticketing.TicketPageTest@6dee4f1b depends on not successfully finished methods 
+[Ticketing.TicketPageTest.TicketPageTestApprovalTicket() on instance Ticketing.TicketPageTest@6dee4f1b]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace588461586", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace588461586'><pre>java.lang.Throwable: Method Ticketing.TicketPageTest.TicketPageTestConfirmApproval() on instance Ticketing.TicketPageTest@6dee4f1b depends on not successfully finished methods 
+[Ticketing.TicketPageTest.TicketPageTestApprovalTicket() on instance Ticketing.TicketPageTest@6dee4f1b]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:150)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>Ticketing.TicketPageTest@6dee4f1b</td></tr>
+<tr>
+<td title='Ticketing.TicketPageTest.TicketPageTestCanNotFinishTicketOfOtherAccount()'><b>TicketPageTestCanNotFinishTicketOfOtherAccount</b><br>Test class: Ticketing.TicketPageTest</td>
+<td><div><pre>java.lang.Throwable: Method Ticketing.TicketPageTest.TicketPageTestCanNotFinishTicketOfOtherAccount() on instance Ticketing.TicketPageTest@6dee4f1b depends on not successfully finished methods 
+[Ticketing.TicketPageTest.TicketPageTestCanNotFinishTicketWithoutRating() on instance Ticketing.TicketPageTest@6dee4f1b]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1678062022", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1678062022'><pre>java.lang.Throwable: Method Ticketing.TicketPageTest.TicketPageTestCanNotFinishTicketOfOtherAccount() on instance Ticketing.TicketPageTest@6dee4f1b depends on not successfully finished methods 
+[Ticketing.TicketPageTest.TicketPageTestCanNotFinishTicketWithoutRating() on instance Ticketing.TicketPageTest@6dee4f1b]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:150)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>Ticketing.TicketPageTest@6dee4f1b</td></tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.SearchFunctionsTestCheckStatusWaitingAndRejectAndPendingAndAccept()'><b>SearchFunctionsTestCheckStatusWaitingAndRejectAndPendingAndAccept</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;1&quot; id=&quot;status1&quot; name=&quot;status&quot; checked=&quot;&quot;&gt; is not clickable at point (33, 241). Other element would receive the click: &lt;div class=&quot;drag-target&quot; style=&quot;touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=119.0.6045.107)
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9a77f2e6be899ea2fadc3da2b5bb4e19, clickElement {id=7464379E981F22949CB9F3F2CA361AE8_element_815}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.107, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\ITTEST\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53727}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53727/devtoo..., se:cdpVersion: 119.0.6045.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (9a77f2e6be899ea2fadc3da2b5bb4e19)] -&gt; css selector: #app-email-sidebar .form-check-input]
+Session ID: 9a77f2e6be899ea2fadc3da2b5bb4e19
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at Ticketing.SearchFunction.lambda$0(SearchFunction.java:31)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.forEach(Unknown Source)
+	at Ticketing.SearchFunction.searchFunctionUnTickAllBoxes(SearchFunction.java:31)
+	at Ticketing.SearchFunctionsTest.beforeMethod(SearchFunctionsTest.java:42)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace944541481", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace944541481'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;1&quot; id=&quot;status1&quot; name=&quot;status&quot; checked=&quot;&quot;&gt; is not clickable at point (33, 241). Other element would receive the click: &lt;div class=&quot;drag-target&quot; style=&quot;touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=119.0.6045.107)
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9a77f2e6be899ea2fadc3da2b5bb4e19, clickElement {id=7464379E981F22949CB9F3F2CA361AE8_element_815}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.107, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\ITTEST\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53727}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53727/devtoo..., se:cdpVersion: 119.0.6045.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (9a77f2e6be899ea2fadc3da2b5bb4e19)] -&gt; css selector: #app-email-sidebar .form-check-input]
+Session ID: 9a77f2e6be899ea2fadc3da2b5bb4e19
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at Ticketing.SearchFunction.lambda$0(SearchFunction.java:31)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/jdk.internal.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.forEach(Unknown Source)
+	at Ticketing.SearchFunction.searchFunctionUnTickAllBoxes(SearchFunction.java:31)
+	at Ticketing.SearchFunctionsTest.beforeMethod(SearchFunctionsTest.java:42)
+	at jdk.internal.reflect.GeneratedMethodAccessor10.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:590)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+<tr>
+<td title='Ticketing.TicketPageTest.TicketPageTestSendTicketToApproval()'><b>TicketPageTestSendTicketToApproval</b><br>Test class: Ticketing.TicketPageTest</td>
+<td><div><pre>java.lang.Throwable: Method Ticketing.TicketPageTest.TicketPageTestSendTicketToApproval() on instance Ticketing.TicketPageTest@6dee4f1b depends on not successfully finished methods 
+[Ticketing.TicketPageTest.TicketPageTestReplyTicketByClickingNotification() on instance Ticketing.TicketPageTest@6dee4f1b]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace52389783", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace52389783'><pre>java.lang.Throwable: Method Ticketing.TicketPageTest.TicketPageTestSendTicketToApproval() on instance Ticketing.TicketPageTest@6dee4f1b depends on not successfully finished methods 
+[Ticketing.TicketPageTest.TicketPageTestReplyTicketByClickingNotification() on instance Ticketing.TicketPageTest@6dee4f1b]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:150)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>Ticketing.TicketPageTest@6dee4f1b</td></tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.SearchFunctionsTestCheckStatusWaitingAndRejectAndPending()'><b>SearchFunctionsTestCheckStatusWaitingAndRejectAndPending</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;1&quot; id=&quot;status1&quot; name=&quot;status&quot; checked=&quot;&quot;&gt; is not clickable at point (33, 241). Other element would receive the click: &lt;div class=&quot;drag-target&quot; style=&quot;touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=119.0.6045.107)
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9a77f2e6be899ea2fadc3da2b5bb4e19, clickElement {id=7464379E981F22949CB9F3F2CA361AE8_element_815}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.107, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\ITTEST\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53727}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53727/devtoo..., se:cdpVersion: 119.0.6045.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (9a77f2e6be899ea2fadc3da2b5bb4e19)] -&gt; css selector: #app-email-sidebar .form-check-input]
+Session ID: 9a77f2e6be899ea2fadc3da2b5bb4e19
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at Ticketing.SearchFunction.lambda$0(SearchFunction.java:31)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.forEach(Unknown Source)
+	at Ticketing.SearchFunction.searchFunctionUnTickAllBoxes(SearchFunction.java:31)
+	at Ticketing.SearchFunctionsTest.beforeMethod(SearchFunctionsTest.java:42)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1382614788", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1382614788'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;1&quot; id=&quot;status1&quot; name=&quot;status&quot; checked=&quot;&quot;&gt; is not clickable at point (33, 241). Other element would receive the click: &lt;div class=&quot;drag-target&quot; style=&quot;touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=119.0.6045.107)
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9a77f2e6be899ea2fadc3da2b5bb4e19, clickElement {id=7464379E981F22949CB9F3F2CA361AE8_element_815}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.107, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\ITTEST\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53727}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53727/devtoo..., se:cdpVersion: 119.0.6045.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (9a77f2e6be899ea2fadc3da2b5bb4e19)] -&gt; css selector: #app-email-sidebar .form-check-input]
+Session ID: 9a77f2e6be899ea2fadc3da2b5bb4e19
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at Ticketing.SearchFunction.lambda$0(SearchFunction.java:31)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/jdk.internal.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.forEach(Unknown Source)
+	at Ticketing.SearchFunction.searchFunctionUnTickAllBoxes(SearchFunction.java:31)
+	at Ticketing.SearchFunctionsTest.beforeMethod(SearchFunctionsTest.java:42)
+	at jdk.internal.reflect.GeneratedMethodAccessor10.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:590)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.SearchFunctionsTestCheckStatusWaitingAndRejectAndPendingAndFinish()'><b>SearchFunctionsTestCheckStatusWaitingAndRejectAndPendingAndFinish</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;1&quot; id=&quot;status1&quot; name=&quot;status&quot; checked=&quot;&quot;&gt; is not clickable at point (33, 241). Other element would receive the click: &lt;div class=&quot;drag-target&quot; style=&quot;touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=119.0.6045.107)
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9a77f2e6be899ea2fadc3da2b5bb4e19, clickElement {id=7464379E981F22949CB9F3F2CA361AE8_element_815}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.107, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\ITTEST\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53727}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53727/devtoo..., se:cdpVersion: 119.0.6045.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (9a77f2e6be899ea2fadc3da2b5bb4e19)] -&gt; css selector: #app-email-sidebar .form-check-input]
+Session ID: 9a77f2e6be899ea2fadc3da2b5bb4e19
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at Ticketing.SearchFunction.lambda$0(SearchFunction.java:31)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.forEach(Unknown Source)
+	at Ticketing.SearchFunction.searchFunctionUnTickAllBoxes(SearchFunction.java:31)
+	at Ticketing.SearchFunctionsTest.beforeMethod(SearchFunctionsTest.java:42)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1303376030", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1303376030'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;1&quot; id=&quot;status1&quot; name=&quot;status&quot; checked=&quot;&quot;&gt; is not clickable at point (33, 241). Other element would receive the click: &lt;div class=&quot;drag-target&quot; style=&quot;touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=119.0.6045.107)
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9a77f2e6be899ea2fadc3da2b5bb4e19, clickElement {id=7464379E981F22949CB9F3F2CA361AE8_element_815}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.107, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\ITTEST\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53727}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53727/devtoo..., se:cdpVersion: 119.0.6045.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (9a77f2e6be899ea2fadc3da2b5bb4e19)] -&gt; css selector: #app-email-sidebar .form-check-input]
+Session ID: 9a77f2e6be899ea2fadc3da2b5bb4e19
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at Ticketing.SearchFunction.lambda$0(SearchFunction.java:31)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/jdk.internal.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.forEach(Unknown Source)
+	at Ticketing.SearchFunction.searchFunctionUnTickAllBoxes(SearchFunction.java:31)
+	at Ticketing.SearchFunctionsTest.beforeMethod(SearchFunctionsTest.java:42)
+	at jdk.internal.reflect.GeneratedMethodAccessor10.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:590)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.SearchFunctionsTestCheckStatusWaitingAndRejectAndPendingAndFinishAndAccept()'><b>SearchFunctionsTestCheckStatusWaitingAndRejectAndPendingAndFinishAndAccept</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;1&quot; id=&quot;status1&quot; name=&quot;status&quot; checked=&quot;&quot;&gt; is not clickable at point (33, 241). Other element would receive the click: &lt;div class=&quot;drag-target&quot; style=&quot;touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=119.0.6045.107)
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9a77f2e6be899ea2fadc3da2b5bb4e19, clickElement {id=7464379E981F22949CB9F3F2CA361AE8_element_815}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.107, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\ITTEST\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53727}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53727/devtoo..., se:cdpVersion: 119.0.6045.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (9a77f2e6be899ea2fadc3da2b5bb4e19)] -&gt; css selector: #app-email-sidebar .form-check-input]
+Session ID: 9a77f2e6be899ea2fadc3da2b5bb4e19
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at Ticketing.SearchFunction.lambda$0(SearchFunction.java:31)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.forEach(Unknown Source)
+	at Ticketing.SearchFunction.searchFunctionUnTickAllBoxes(SearchFunction.java:31)
+	at Ticketing.SearchFunctionsTest.beforeMethod(SearchFunctionsTest.java:42)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1476235916", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1476235916'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;1&quot; id=&quot;status1&quot; name=&quot;status&quot; checked=&quot;&quot;&gt; is not clickable at point (33, 241). Other element would receive the click: &lt;div class=&quot;drag-target&quot; style=&quot;touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=119.0.6045.107)
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9a77f2e6be899ea2fadc3da2b5bb4e19, clickElement {id=7464379E981F22949CB9F3F2CA361AE8_element_815}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.107, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\ITTEST\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53727}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53727/devtoo..., se:cdpVersion: 119.0.6045.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (9a77f2e6be899ea2fadc3da2b5bb4e19)] -&gt; css selector: #app-email-sidebar .form-check-input]
+Session ID: 9a77f2e6be899ea2fadc3da2b5bb4e19
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at Ticketing.SearchFunction.lambda$0(SearchFunction.java:31)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/jdk.internal.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.forEach(Unknown Source)
+	at Ticketing.SearchFunction.searchFunctionUnTickAllBoxes(SearchFunction.java:31)
+	at Ticketing.SearchFunctionsTest.beforeMethod(SearchFunctionsTest.java:42)
+	at jdk.internal.reflect.GeneratedMethodAccessor10.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:590)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.SearchFuntionTestCheckAfterInputCreaterName()'><b>SearchFuntionTestCheckAfterInputCreaterName</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;1&quot; id=&quot;status1&quot; name=&quot;status&quot; checked=&quot;&quot;&gt; is not clickable at point (33, 241). Other element would receive the click: &lt;div class=&quot;drag-target&quot; style=&quot;touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=119.0.6045.107)
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9a77f2e6be899ea2fadc3da2b5bb4e19, clickElement {id=7464379E981F22949CB9F3F2CA361AE8_element_815}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.107, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\ITTEST\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53727}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53727/devtoo..., se:cdpVersion: 119.0.6045.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (9a77f2e6be899ea2fadc3da2b5bb4e19)] -&gt; css selector: #app-email-sidebar .form-check-input]
+Session ID: 9a77f2e6be899ea2fadc3da2b5bb4e19
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at Ticketing.SearchFunction.lambda$0(SearchFunction.java:31)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.forEach(Unknown Source)
+	at Ticketing.SearchFunction.searchFunctionUnTickAllBoxes(SearchFunction.java:31)
+	at Ticketing.SearchFunctionsTest.beforeMethod(SearchFunctionsTest.java:42)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace685615340", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace685615340'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;1&quot; id=&quot;status1&quot; name=&quot;status&quot; checked=&quot;&quot;&gt; is not clickable at point (33, 241). Other element would receive the click: &lt;div class=&quot;drag-target&quot; style=&quot;touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=119.0.6045.107)
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9a77f2e6be899ea2fadc3da2b5bb4e19, clickElement {id=7464379E981F22949CB9F3F2CA361AE8_element_815}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.107, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\ITTEST\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53727}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53727/devtoo..., se:cdpVersion: 119.0.6045.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (9a77f2e6be899ea2fadc3da2b5bb4e19)] -&gt; css selector: #app-email-sidebar .form-check-input]
+Session ID: 9a77f2e6be899ea2fadc3da2b5bb4e19
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at Ticketing.SearchFunction.lambda$0(SearchFunction.java:31)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/jdk.internal.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.forEach(Unknown Source)
+	at Ticketing.SearchFunction.searchFunctionUnTickAllBoxes(SearchFunction.java:31)
+	at Ticketing.SearchFunctionsTest.beforeMethod(SearchFunctionsTest.java:42)
+	at jdk.internal.reflect.GeneratedMethodAccessor10.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:590)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+<tr>
+<td title='Ticketing.TicketPageTest.TicketPageTestFinishTicket()'><b>TicketPageTestFinishTicket</b><br>Test class: Ticketing.TicketPageTest</td>
+<td><div><pre>java.lang.Throwable: Method Ticketing.TicketPageTest.TicketPageTestFinishTicket() on instance Ticketing.TicketPageTest@6dee4f1b depends on not successfully finished methods 
+[Ticketing.TicketPageTest.TicketPageTestCanNotFinishTicketOfOtherAccount() on instance Ticketing.TicketPageTest@6dee4f1b]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1513467271", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1513467271'><pre>java.lang.Throwable: Method Ticketing.TicketPageTest.TicketPageTestFinishTicket() on instance Ticketing.TicketPageTest@6dee4f1b depends on not successfully finished methods 
+[Ticketing.TicketPageTest.TicketPageTestCanNotFinishTicketOfOtherAccount() on instance Ticketing.TicketPageTest@6dee4f1b]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:150)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>Ticketing.TicketPageTest@6dee4f1b</td></tr>
+<tr>
+<td title='Ticketing.TicketPageTest.TicketPageTestCanNotFinishTicketWithoutRating()'><b>TicketPageTestCanNotFinishTicketWithoutRating</b><br>Test class: Ticketing.TicketPageTest</td>
+<td><div><pre>java.lang.Throwable: Method Ticketing.TicketPageTest.TicketPageTestCanNotFinishTicketWithoutRating() on instance Ticketing.TicketPageTest@6dee4f1b depends on not successfully finished methods 
+[Ticketing.TicketPageTest.TicketPageTestConfirmApproval() on instance Ticketing.TicketPageTest@6dee4f1b]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1128279987", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1128279987'><pre>java.lang.Throwable: Method Ticketing.TicketPageTest.TicketPageTestCanNotFinishTicketWithoutRating() on instance Ticketing.TicketPageTest@6dee4f1b depends on not successfully finished methods 
+[Ticketing.TicketPageTest.TicketPageTestConfirmApproval() on instance Ticketing.TicketPageTest@6dee4f1b]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:150)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>Ticketing.TicketPageTest@6dee4f1b</td></tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.SearchFuntionTestCheckAfterInputTitle()'><b>SearchFuntionTestCheckAfterInputTitle</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;1&quot; id=&quot;status1&quot; name=&quot;status&quot; checked=&quot;&quot;&gt; is not clickable at point (33, 241). Other element would receive the click: &lt;div class=&quot;drag-target&quot; style=&quot;touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=119.0.6045.107)
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9a77f2e6be899ea2fadc3da2b5bb4e19, clickElement {id=7464379E981F22949CB9F3F2CA361AE8_element_815}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.107, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\ITTEST\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53727}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53727/devtoo..., se:cdpVersion: 119.0.6045.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (9a77f2e6be899ea2fadc3da2b5bb4e19)] -&gt; css selector: #app-email-sidebar .form-check-input]
+Session ID: 9a77f2e6be899ea2fadc3da2b5bb4e19
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at Ticketing.SearchFunction.lambda$0(SearchFunction.java:31)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.forEach(Unknown Source)
+	at Ticketing.SearchFunction.searchFunctionUnTickAllBoxes(SearchFunction.java:31)
+	at Ticketing.SearchFunctionsTest.beforeMethod(SearchFunctionsTest.java:42)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2145409715", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2145409715'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;1&quot; id=&quot;status1&quot; name=&quot;status&quot; checked=&quot;&quot;&gt; is not clickable at point (33, 241). Other element would receive the click: &lt;div class=&quot;drag-target&quot; style=&quot;touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=119.0.6045.107)
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9a77f2e6be899ea2fadc3da2b5bb4e19, clickElement {id=7464379E981F22949CB9F3F2CA361AE8_element_815}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.107, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\ITTEST\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53727}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53727/devtoo..., se:cdpVersion: 119.0.6045.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (9a77f2e6be899ea2fadc3da2b5bb4e19)] -&gt; css selector: #app-email-sidebar .form-check-input]
+Session ID: 9a77f2e6be899ea2fadc3da2b5bb4e19
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at Ticketing.SearchFunction.lambda$0(SearchFunction.java:31)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/jdk.internal.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.forEach(Unknown Source)
+	at Ticketing.SearchFunction.searchFunctionUnTickAllBoxes(SearchFunction.java:31)
+	at Ticketing.SearchFunctionsTest.beforeMethod(SearchFunctionsTest.java:42)
+	at jdk.internal.reflect.GeneratedMethodAccessor10.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:590)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+<tr>
+<td title='Ticketing.SearchFunctionsTest.SearchFunctionsTestCheckStatusWaitingAndRejectAndFinishAndAccept()'><b>SearchFunctionsTestCheckStatusWaitingAndRejectAndFinishAndAccept</b><br>Test class: Ticketing.SearchFunctionsTest</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;1&quot; id=&quot;status1&quot; name=&quot;status&quot; checked=&quot;&quot;&gt; is not clickable at point (33, 241). Other element would receive the click: &lt;div class=&quot;drag-target&quot; style=&quot;touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=119.0.6045.107)
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9a77f2e6be899ea2fadc3da2b5bb4e19, clickElement {id=7464379E981F22949CB9F3F2CA361AE8_element_815}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.107, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\ITTEST\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53727}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53727/devtoo..., se:cdpVersion: 119.0.6045.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (9a77f2e6be899ea2fadc3da2b5bb4e19)] -&gt; css selector: #app-email-sidebar .form-check-input]
+Session ID: 9a77f2e6be899ea2fadc3da2b5bb4e19
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at Ticketing.SearchFunction.lambda$0(SearchFunction.java:31)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.forEach(Unknown Source)
+	at Ticketing.SearchFunction.searchFunctionUnTickAllBoxes(SearchFunction.java:31)
+	at Ticketing.SearchFunctionsTest.beforeMethod(SearchFunctionsTest.java:42)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace220550046", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace220550046'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; value=&quot;1&quot; id=&quot;status1&quot; name=&quot;status&quot; checked=&quot;&quot;&gt; is not clickable at point (33, 241). Other element would receive the click: &lt;div class=&quot;drag-target&quot; style=&quot;touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=119.0.6045.107)
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9a77f2e6be899ea2fadc3da2b5bb4e19, clickElement {id=7464379E981F22949CB9F3F2CA361AE8_element_815}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.107, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\ITTEST\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53727}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53727/devtoo..., se:cdpVersion: 119.0.6045.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (9a77f2e6be899ea2fadc3da2b5bb4e19)] -&gt; css selector: #app-email-sidebar .form-check-input]
+Session ID: 9a77f2e6be899ea2fadc3da2b5bb4e19
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at Ticketing.SearchFunction.lambda$0(SearchFunction.java:31)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/jdk.internal.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.forEach(Unknown Source)
+	at Ticketing.SearchFunction.searchFunctionUnTickAllBoxes(SearchFunction.java:31)
+	at Ticketing.SearchFunctionsTest.beforeMethod(SearchFunctionsTest.java:42)
+	at jdk.internal.reflect.GeneratedMethodAccessor10.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:823)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:590)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>Ticketing.SearchFunctionsTest@1b835480</td></tr>
+<tr>
+<td title='Ticketing.TicketPageTest.TicketPageTestApprovalTicket()'><b>TicketPageTestApprovalTicket</b><br>Test class: Ticketing.TicketPageTest</td>
+<td><div><pre>java.lang.Throwable: Method Ticketing.TicketPageTest.TicketPageTestApprovalTicket() on instance Ticketing.TicketPageTest@6dee4f1b depends on not successfully finished methods 
+[Ticketing.TicketPageTest.TicketPageTestSendTicketToApproval() on instance Ticketing.TicketPageTest@6dee4f1b]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace277996876", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace277996876'><pre>java.lang.Throwable: Method Ticketing.TicketPageTest.TicketPageTestApprovalTicket() on instance Ticketing.TicketPageTest@6dee4f1b depends on not successfully finished methods 
+[Ticketing.TicketPageTest.TicketPageTestSendTicketToApproval() on instance Ticketing.TicketPageTest@6dee4f1b]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:150)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+</pre></div></td>
+<td>0</td>
+<td>Ticketing.TicketPageTest@6dee4f1b</td></tr>
+</table><p>
+</body>
+</html>
